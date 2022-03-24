@@ -14,6 +14,7 @@ async function getArtists() {
   return await loadJson(`${BASE_URL}/api/artists`)
 }
 
+
 // Retourne la liste des chansons d'un ariste
 async function getSongsForArtist(id) {
   return await loadJson(`${BASE_URL}/api/artists/${id}/songs`)

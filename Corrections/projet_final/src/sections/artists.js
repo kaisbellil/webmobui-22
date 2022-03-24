@@ -28,8 +28,8 @@ function renderArtists(artists) {
 
 // Charge les artistes et itère dessus
 async function renderArtistsSection() {
-  const artists = await getArtists()
-  renderArtists(artists)
+  const artistes = await getArtists()
+  renderArtists(artistes)
 }
 
 export default renderArtistsSection

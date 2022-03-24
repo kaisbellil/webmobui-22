@@ -38,6 +38,7 @@ function displaySection() {
       if(sectionSplit[1]) {
         toggleSection('#songs')
         renderSongsSection(sectionSplit[1])
+        
       }
       else {
         renderArtistsSection()
