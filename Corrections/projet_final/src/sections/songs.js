@@ -8,6 +8,8 @@ const songsSectionTitle = songsSection.querySelector('h4')
 const songList = songsSection.querySelector('.list')
 const songListItemTemplate = songsSection.querySelector('#song-list-item-template')
 
+
+
 function toggleFavoriteIcon(favoriteIcon, song) {
   if(isInFavorite(song)) {
     favoriteIcon.innerText = 'favorite'

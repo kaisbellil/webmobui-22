@@ -25,6 +25,7 @@ function displaySection() {
   // S'il n'y a pas de hash (par ex, on est sur "localhost:8080/"), le défaut devient '#home'
   const section = window.location.hash || '#home'
   const sectionSplit = section.split('-')
+  
 
   // Toggle par défaut des sections et de la navigation
   toggleSection(sectionSplit[0])
@@ -37,8 +38,7 @@ function displaySection() {
       // Est-ce qu'il y a un id ? typiquement: #artists-1234
       if(sectionSplit[1]) {
         toggleSection('#songs')
-        renderSongsSection(sectionSplit[1])
-        
+        renderSongsSection(sectionSplit[1]) 
       }
       else {
         renderArtistsSection()

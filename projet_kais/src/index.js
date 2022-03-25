@@ -2,6 +2,7 @@ import './css/index.css'
 import { domOn, domForEach } from './lib/domManipulator'
 
 import renderArtistsSection from './sections/artists'
+import renderSongsSection from './sections/songs'
 
 function toggleSection(section) {
   // Supprime/Ajoute la classe active sur la section
@@ -35,9 +36,8 @@ function displaySection() {
     case '#artists':
        // Est-ce qu'il y a un id ? typiquement: #artists-1234
        if(sectionSplit[1]) {
-        /* toggleSection('#songs')
-        renderSongsSection(sectionSplit[1]) */
-        
+        toggleSection('#songs')
+        renderSongsSection(sectionSplit[1])
       }
       else {
         renderArtistsSection()
