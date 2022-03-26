@@ -20,6 +20,7 @@ function toggleNav(section) {
 
 
 
+
 // Affichage d'une section
 function displaySection() {
   // S'il n'y a pas de hash (par ex, on est sur "localhost:8080/"), le défaut devient '#home'
@@ -43,10 +44,12 @@ function displaySection() {
         renderArtistsSection()
       }
     break;
-  
-    default:
-      break;
-  }
+    case '#search':
+      // On réutilise la section 'songs' en arrière plan
+      toggleSection('#songs')
+      // on décode la chaine de recherche pour l'afficher proprement
+      // renderSearchSongsSection(decodeURIComponent(sectionSplit[1]))
+    break;
 
   
 }

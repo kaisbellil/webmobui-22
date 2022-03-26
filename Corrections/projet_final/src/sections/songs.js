@@ -10,6 +10,7 @@ const songListItemTemplate = songsSection.querySelector('#song-list-item-templat
 
 
 
+
 function toggleFavoriteIcon(favoriteIcon, song) {
   if(isInFavorite(song)) {
     favoriteIcon.innerText = 'favorite'
