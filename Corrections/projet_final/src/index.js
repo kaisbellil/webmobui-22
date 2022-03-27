@@ -52,7 +52,7 @@ function displaySection() {
       renderSearchSongsSection(decodeURIComponent(sectionSplit[1]))
     break;
 
-    case '#favorites':
+    case '#favorites':  
       // On réutilise la section 'songs' en arrière plan
       toggleSection('#songs')
       // on décode la chaine de recherche pour l'afficher proprement

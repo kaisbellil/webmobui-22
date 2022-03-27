@@ -50,8 +50,7 @@ function renderSongs(songs) {
     // On itère sur chaque élément
     for(const song of songs) {
       renderSong(song, songs)
-    }
-  }
+    }}
   else {
     const noResults = songListItemTemplate.content.cloneNode(true) // true pour cloner également les enfants du node
     noResults.querySelector('.list-item-title').innerText = 'Aucun résultat'
