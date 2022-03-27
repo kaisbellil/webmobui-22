@@ -1,5 +1,5 @@
 import { ajoutSupprime, listeFavoris, isInFavorite } from './favorites'
-
+import { setSongList, playSong } from './player'
 
 async function loadJson(id) {
     const url = `https://webmob-ui-22-spotlified.herokuapp.com/api/artists/${id}/songs`
@@ -29,10 +29,18 @@ async function loadJson(id) {
     }
     
 
-    function afficherSon(son) {
+    function afficherSon(son, songs) {
         const newSon = songListTemplate.content.cloneNode(true) // true pour cloner également les enfants du node
         newSon.querySelector('.list-item-title').innerText = son.title
         
+
+// Au clique sur le bouton play, on transmet la chanson et le tableau duquel elle provient au player. Cela permet de
+  // lire la chanson et passer le contexte actuel au player (le tableau) pour faire précédent/suivant
+  newSon.querySelector('.play-button').addEventListener('click', () => {
+    playSong(son, songs)
+    window.location.hash = '#player'
+  })
+
 
         // Au clique sur le bouton favori, on toggle la chanson dans le storage et on ajuste son icone en fonction
   newSon.querySelector('.favorite-button').addEventListener('click', (e) => {
